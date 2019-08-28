@@ -2,9 +2,7 @@ node {
     def app
 
     stage ('Docker') {
-        steps {
             sh 'docker version'
-        }
     }
 
     stage('Clone repository') {
