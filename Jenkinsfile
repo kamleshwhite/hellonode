@@ -1,6 +1,12 @@
 node {
     def app
 
+    stage ('Docker') {
+        steps {
+            sh 'docker version'
+        }
+    }
+
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
