@@ -2,7 +2,7 @@ node {
     def app
 
     stage ('Docker') {
-            env.PATH = "/usr/local/bin/docker:${env.PATH}"
+            env.PATH = "/usr/local/bin/:${env.PATH}"
             echo "${env.PATH}"
             sh 'docker version'
     }
